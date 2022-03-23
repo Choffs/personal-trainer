@@ -9,6 +9,10 @@
   --large-screens: #{$largeScreens};
 }
 
+p, h2{
+  margin: 0;
+  padding: 0;
+}
 
 .secondary{
   opacity: .75;
@@ -33,13 +37,35 @@
 .light{
   background-color: $lightBase;
 }
-.headerText{
+.header-text{
   font-size: $headerTextSize;
   font-weight: 900;
 }
-.primaryText{
+.primary-text{
   font-size: 1.4rem;
   font-weight: 900;
+  height: 100%;
+}
+.section{
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+.d-flex{
+  display: flex;
+}
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+.flex-row{
+  display: flex;
+  flex-direction: row;
+}
+.flex-center{
+  align-items: center;
+  justify-content: center;
 }
 
 .App {
