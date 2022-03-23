@@ -1,0 +1,25 @@
+@import './variables.scss';
+.header-text{
+    font-size: clamp(calc($headerTextSize / 2), calc(100vw / calc(1440 / 64)), $headerTextSize);
+    font-weight: 900;
+  }
+  .primary-text{
+    font-size: clamp(calc($primaryTextSize / 1.25),calc(100vw / calc(1440/ 16)),$primaryTextSize);
+  }
+
+  @media (max-width: $medScreens){
+      .primary-text{
+        font-weight: 700;
+      }
+  }
+  @media (min-width: calc($medScreens + 1px)) and (max-width: calc($largeScreens - 1px)){
+      .primary-text{
+        font-weight: 700;
+      }
+
+  }
+  @media (min-width: $largeScreens){
+      .primary-text{
+        font-weight: 900;
+      }
+  }
