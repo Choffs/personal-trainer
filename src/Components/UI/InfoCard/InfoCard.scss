@@ -1,0 +1,23 @@
+
+.info-card{
+    display: flex;
+    width: 100%;
+    min-height: var(--card-max-height);
+}
+.info-card .image-card{
+    flex: 2;
+    width: var(--card-max-width);
+}
+.info-card-text-container{
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+}
+.info-card-text-container h2{
+    flex: 1;
+}
+.info-card-text-container p{
+    flex: 3;
+    margin: 0 15rem;
+    padding-bottom: 1.25rem;
+}

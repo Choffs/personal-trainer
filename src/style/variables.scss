@@ -1,0 +1,26 @@
+$darkBase: #21252A;
+$lightBase: #E9E9E9;
+$cardMinHeight: 307.3px;
+$cardMaxHeight: 569px;
+$cardMinWidth: 256px;
+$cardMaxWidth: 474.02px;
+$smallScreens: 360px;
+$medScreens: 768px;
+$largeScreens: 1440px;
+$headerTextSize: 4rem;
+
+
+
+:root{
+  --dark-base: #{$darkBase};
+  --light-base: #{$lightBase};
+  --small-screens: #{$smallScreens};
+  --med-screens: #{$medScreens};
+  --large-screens: #{$largeScreens};
+  --card-min-width: #{$cardMinWidth};
+  --card-min-height: #{$cardMinHeight};
+  --card-max-width: #{$cardMaxWidth};
+  --card-max-height: #{$cardMaxHeight};
+  --header-text-size: #{$headerTextSize};
+
+}

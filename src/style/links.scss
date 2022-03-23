@@ -1,0 +1,12 @@
+
+
+.link{
+    opacity: .75;
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity .25s;
+}
+.link:hover{
+    opacity: 1.0;
+}
