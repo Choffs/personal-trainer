@@ -1,13 +1,8 @@
 @import './style/variables.scss';
 @import './style/links.scss';
+@import './style/text.scss';
 
-:root{
-  --dark-base: #{$darkBase};
-  --light-base: #{$lightBase};
-  --small-screens: #{$smallScreens};
-  --med-screens: #{$medScreens};
-  --large-screens: #{$largeScreens};
-}
+
 
 p, h2{
   margin: 0;
@@ -37,21 +32,7 @@ p, h2{
 .light{
   background-color: $lightBase;
 }
-.header-text{
-  font-size: $headerTextSize;
-  font-weight: 900;
-}
-.primary-text{
-  font-size: 1.4rem;
-  font-weight: 900;
-  height: 100%;
-}
-.section{
-  box-sizing: border-box;
-  width: 100%;
-  height: 100vh;
-  margin: 0;
-}
+
 .d-flex{
   display: flex;
 }
@@ -63,6 +44,7 @@ p, h2{
   display: flex;
   flex-direction: row;
 }
+
 .flex-center{
   align-items: center;
   justify-content: center;
