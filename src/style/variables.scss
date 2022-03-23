@@ -8,6 +8,8 @@ $smallScreens: 360px;
 $medScreens: 768px;
 $largeScreens: 1440px;
 $headerTextSize: 4rem;
+$primaryTextSize: 1rem;
+$smallestScreenSupported: 360px;
 
 
 
@@ -24,3 +26,4 @@ $headerTextSize: 4rem;
   --header-text-size: #{$headerTextSize};
 
 }
+
