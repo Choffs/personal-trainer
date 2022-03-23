@@ -1,5 +1,6 @@
 import Hero from "./Hero/Hero";
 import ImageCard from "../UI/ImageCard/ImageCard";
+import Section from "../UI/Section/Section";
 import InfoCard from "../UI/InfoCard/InfoCard";
 
 
@@ -8,6 +9,9 @@ const Landing = ()=>{
     return (
         <div>
             <Hero />
+            <Section className='dark-mode section flex-column flex-center' title='The Pillars of Health' text={lorem} />
+            <div>
+
             <InfoCard className='dark-mode' 
             src='https://images.unsplash.com/photo-1579113800032-c38bd7635818?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
             imageTitle='Diet'
@@ -26,6 +30,10 @@ const Landing = ()=>{
             title='Balanced Lifestyle'
             infoCardText={lorem}
             />
+
+            </div>
+             <Section className='light-mode section d-flex flex-column' title='Meet Our Highly Trained Staff' text={lorem} />
+             <Section className='dark-mode section flex-column flex-center' title='The Pillars of Health' text={lorem} />
         </div>
     )
 }

@@ -11,8 +11,8 @@ const InfoCard =props=>{
         <div className={`info-card ${props.className}`}>
             {(src.length > 0) && <ImageCard src={src} text={imageTitle}/>}
             <div className='info-card-text-container'>
-                <h2 className='headerText'>{title}</h2>
-                <p className='primaryText secondary'>{infoCardText}</p>
+                <h2 className='header-text'>{title}</h2>
+                <p className='primary-text secondary'>{infoCardText}</p>
             </div>
         </div>)
 }
