@@ -2,6 +2,8 @@
 .image-card{
     position: relative;
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
     min-width: $cardMinWidth;
@@ -10,8 +12,14 @@
 .image-card h2{
     z-index: 2;
     color: var(--light-base);
+    background: var(--dark-base);
+    opacity: .75;
     font-weight: 900;
     font-size: 4rem;
+}
+.image-card span{
+    z-index: 2;
+    display: none;
 }
 .image-card img{
     position: absolute;
@@ -23,4 +31,16 @@
     height: 100%;
     object-fit: fill;
     border-radius: inherit;
+}
+.card-show-button span{
+    display: block;
+}
+@media screen and (max-width: $largeScreens){
+    .image-card.scale{
+        width: var(--card-min-width);
+        height: var(--card-min-height);
+    }
+    .image-card.scale h2{
+        font-size: 2rem;
+    } 
 }
