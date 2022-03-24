@@ -16,7 +16,7 @@ const SVG = (props)=>{
             switch(type.toLowerCase()){
                 case 'menu':
                     return <SVGMenu />
-                case 'cicle-arrow':
+                case 'circle-arrow':
                     return <SVGCircleArrow />
                 case 'cancel':
                     return <SVGCancel />
