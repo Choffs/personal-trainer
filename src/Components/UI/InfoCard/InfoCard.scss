@@ -1,23 +1,46 @@
-
+@import '../../../style/variables.scss';
 .info-card{
     display: flex;
     width: 100%;
     min-height: var(--card-max-height);
+    max-height: var(--card-max-height);
 }
-.info-card .image-card{
+.card-image-container{
     flex: 2;
     width: var(--card-max-width);
 }
+
 .info-card-text-container{
     display: flex;
     flex: 3;
+    padding: 0 clamp(2rem, calc(25vw / 6) ,10rem);
     flex-direction: column;
+    gap: 2.25rem;
 }
-.info-card-text-container h2{
-    flex: 1;
+
+@media screen and (max-width: $medScreens) {
+    .info-card-text-container{
+        display: none;
+    }
+    .card-image-container .image-card-circle-arrow{
+        display: block;
+    }
 }
-.info-card-text-container p{
-    flex: 3;
-    margin: 0 15rem;
-    padding-bottom: 1.25rem;
+@media screen and (max-width: $largeScreens){
+    .info-card-text-container{
+        flex: 4;
+    }
+    .card-image-container{
+        flex: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }       
+
+}
+@media screen and (min-width: calc($largeScreens + 1px)){
+    .card-image-container .image-card.scale{
+        width: $cardMaxWidth;
+        height: 100%;
+    }
 }

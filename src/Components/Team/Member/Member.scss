@@ -1,0 +1,101 @@
+@import '../../../style/variables.scss';
+$memberImageSize: calc(100vw / 4);
+.member{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 268px;
+    height:$memberImageSize;
+    max-height: 512px;
+    gap: 1.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+}
+.member-body{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.member-title{
+    position: relative;
+    z-index: 2;
+    min-width: 75%;
+    max-width: 100%;
+    text-shadow: 1px 1px 1px black;
+}
+.member h2{
+    margin-top: 2.5rem;
+    text-align: left;
+}
+.member p{
+    text-align: left;
+    min-width: 75%;
+    width: calc((100vw * -1) + $largeScreens);
+    max-width: 95%;
+    z-index: 2;
+    text-shadow: 1px 1px 1px black;
+}
+
+.member-img{
+    min-width: 268px;
+    width: $memberImageSize;
+    max-width: 512px;
+    min-height: 268px;
+    background-position: top;
+    background-size: cover;
+    height:$memberImageSize;
+    max-height: 512px;
+    background-color: white;
+    border-radius: 50%;
+    filter: drop-shadow(7px 7px 10px rgba(0, 0, 0, 0.25));
+}
+.member.reversed {
+    justify-content: center;
+    text-align: right;
+
+    h2, p{
+        text-align: right;
+    }
+    P{
+        align-self: flex-end;
+    }
+    
+    .member-img{
+    order: 2;
+    }
+
+}
+
+@media (max-width: $medScreens){
+    .member-img, .member.reversed .member-img{
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+    .member-title{
+        min-height: 268px;
+        height:$memberImageSize;
+        max-height: 347px;
+    }
+    .member{
+        justify-content: center;
+        height: auto;
+        max-height: unset;
+    }
+    .member-body{
+        width: 100%;
+    }
+    .member p{
+        margin-top: 1.25rem;
+        text-align: center !important;
+    }
+    .member-title h2, .member-title h3{
+        text-align: center !important;
+    } 
+}

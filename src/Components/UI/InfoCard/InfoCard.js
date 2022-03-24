@@ -6,11 +6,18 @@ const InfoCard =props=>{
     const imageTitle = props.imageTitle || 'title';
     const title = props.title || 'title';
     const infoCardText = props.infoCardText || 'text';
+    const clickCard =()=>{
+        if(window.screen.width <= 768){
+            console.log('Small Screen')
+        }
+    }
 
     return (
         <div className={`info-card ${props.className}`}>
-            {(src.length > 0) && <ImageCard src={src} text={imageTitle}/>}
-            <div className='info-card-text-container'>
+            <div className='card-image-container'>
+            {(src.length > 0) && <ImageCard onClick={clickCard} className='scale' src={src} text={imageTitle}/>}
+            </div>
+            <div className='info-card-text-container flex-center'>
                 <h2 className='header-text'>{title}</h2>
                 <p className='primary-text secondary'>{infoCardText}</p>
             </div>
