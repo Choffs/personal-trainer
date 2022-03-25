@@ -1,6 +1,7 @@
 @import './style/variables.scss';
 @import './style/links.scss';
 @import './style/text.scss';
+@import './style/display-classes.scss';
 
 
 
@@ -42,19 +43,5 @@ a{
   background-color: $lightBase;
 }
 
-.d-flex{
-  display: flex;
-}
-.flex-column{
-  display: flex;
-  flex-direction: column;
-}
-.flex-row{
-  display: flex;
-  flex-direction: row;
-}
-.flex-center{
-  align-items: center;
-  justify-content: center;
-}
+
 

@@ -1,8 +1,5 @@
 
 .team{
-    display: flex;
-    flex-direction: column;
-    gap: 5rem;
     padding-bottom: 5rem;
     .team-title{
         margin-top: 2rem;
@@ -13,8 +10,6 @@
 }
 
 .member-container{
-    display: flex;
-    flex-direction: column;
     gap: 15rem;
     margin-bottom: 5rem;
 }

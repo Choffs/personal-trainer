@@ -1,0 +1,77 @@
+$gaps: (1,2,3,4,5,6,7,8,9,10);
+$flex-size: (1,2,3,4);
+
+
+
+
+
+.d-flex{
+    display: flex;
+
+    &.f-end{
+        justify-content: flex-end;
+    }
+    &.f-start{
+        justify-content: flex-start;
+    }
+    &.f-column{
+        flex-direction: column;
+        &.f-start{
+            align-items: flex-start;
+        }
+        &.f-end{
+            align-items: flex-end;
+        }
+    }
+    &.f-row{
+        flex-direction: row;
+    }
+    &.f-center{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@each $gap in $gaps{
+    .g-#{$gap} {
+        gap: #{$gap}rem;
+    }
+}
+@each $flex in $flex-size{
+    .f-#{$flex} {
+        flex: #{$flex};
+    }
+}
+.d-none{
+    display: none;
+}
+.d-block{
+    display: block;
+}
+.p-abs{
+    position: absolute;
+}
+.p-fixed{
+    position: fixed;
+}
+.p-rel{
+    position: relative;
+}
+.p-static{
+    position: static;
+}
+.p-abs.fs, .p-fixed.fs{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.w-50p{
+    width: 50%;
+}
+.w-50vw{
+    width: 50vw;
+}

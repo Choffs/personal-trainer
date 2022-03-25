@@ -9,10 +9,10 @@ const Hero = ()=>{
         window.scrollTo({left: 0,top: section.offsetHeight, behavior: 'smooth'});
     }
     return (
-        <div className='hero'>
-            <img src={heroMain} alt=''/>
-            <img className='hero-wave'src={wave} alt=''/>
-            <div className='hero-container'>
+        <div className='hero p-rel d-flex'>
+            <img src={heroMain} className='p-abs fs'alt=''/>
+            <img className='hero-wave p-abs fs'src={wave} alt=''/>
+            <div className='hero-container d-flex f-column f-center'>
                 <h2 className='text-light'>Let us Help you Reach Your Goals</h2>
                 <button onClick={learnHowClickHandler} >Learn How</button>
             </div>

@@ -17,7 +17,7 @@ const Landing = (props)=>{
     return (
         <main>
             <Hero />
-            <Section jumpTo={{jumpId: 'info-card-start', jumpFunc:jumpFunction}} id='pillars-of-health-sec' className='dark-mode section flex-column flex-center' title='The Pillars of Health' text={lorem} />
+            <Section jumpTo={{jumpId: 'info-card-start', jumpFunc:jumpFunction}} id='pillars-of-health-sec' className='dark-mode section d-flex f-column f-center' title='The Pillars of Health' text={lorem} />
             <div>
 
             <InfoCard id='info-card-start' className='dark-mode' 
@@ -43,9 +43,9 @@ const Landing = (props)=>{
             />
 
             </div>
-             <Section jumpTo={{jumpId: 'team-page', jumpFunc:jumpFunction}} className='light-mode section d-flex flex-column' title='Meet Our Highly Trained Staff' text={lorem} />
+             <Section jumpTo={{jumpId: 'team-page', jumpFunc:jumpFunction}} className='light-mode section d-flex f-column' title='Meet Our Highly Trained Staff' text={lorem} />
              <Team id='team-page'/>
-             <Section jumpTo={{jumpId: 'services-page', jumpFunc:jumpFunction}} className='dark-mode section flex-column flex-center' title='The Services We Offer' text={lorem} />
+             <Section jumpTo={{jumpId: 'services-page', jumpFunc:jumpFunction}} className='dark-mode section d-flex f-column f-center' title='The Services We Offer' text={lorem} />
              <Services />
              <Contact />
         </main>

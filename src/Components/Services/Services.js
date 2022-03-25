@@ -26,7 +26,7 @@ const Services = ()=>{
         });
     }
     return (
-        <div id='services-page' className="services">
+        <div id='services-page' className="services d-flex g-5 f-center">
             {getCards()}
         </div>
     )

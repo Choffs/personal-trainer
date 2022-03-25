@@ -24,9 +24,9 @@ const Team = ()=>{
         })
     }
     return (
-        <div id='team-page' className="team dark-mode">
+        <div id='team-page' className="team d-flex f-column g-5 dark-mode">
             <h2 className='team-title'>Meet The Team</h2>
-            <div className="member-container">
+            <div className="member-container d-flex f-column">
                {getTeam()}
             </div>
         </div>
