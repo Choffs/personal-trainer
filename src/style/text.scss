@@ -6,8 +6,11 @@
   .header-text.secondary{
     font-size: clamp(calc($headerTextSize / 3), calc(100vw / calc(1440 / 32)), $headerTextSize);
   }
+  .header-text.head-to-primary{
+    font-size: clamp($primaryTextSize, calc(100vw / calc(1440 / 32)), $headerTextSize);
+  }
   .primary-text{
-    font-size: clamp(calc($primaryTextSize / 1.25),calc(100vw / calc(1440/ 16)),$primaryTextSize);
+    font-size: clamp(calc($primaryTextSize / 1.5),calc(100vw / calc(1440/ 16)),$primaryTextSize);
   }
 
   @media (max-width: $medScreens){

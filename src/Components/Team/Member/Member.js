@@ -8,11 +8,11 @@ const Member =(props)=>{
     const reversed = props.reversed || false;
     // 
     return (
-        <div className={`member ${(reversed) && 'reversed'}`}>
+        <div className={`member d-flex p-rel f-center ${(reversed) && 'reversed'}`}>
             <div className="member-img" style={(memberImage !== null) ? {backgroundImage: `url(${memberImage})`} : {}}>
             </div>
-            <div className="member-body">
-                <div className="member-title">
+            <div className="member-body d-flex f-column">
+                <div className="member-title p-rel">
                     <h2 className='text-light header-text'>{memberName}</h2>
                     <h3 className='text-light header-text secondary'>{memberTitle}</h3>
                 </div>

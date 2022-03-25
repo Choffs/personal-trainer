@@ -17,6 +17,7 @@ const Sidebar =(props)=>{
             sideBarTransitionHandle=null;
         }
         if(showSidebar){
+            if(transitionClass === 'open') return;
             setTransitionClass('opening');
             sideBarTransitionHandle = setTimeout(()=>{
                 setTransitionClass('open');
@@ -25,6 +26,7 @@ const Sidebar =(props)=>{
             }, 200);
         }
         else{
+            if(transitionClass === 'closed') return;
             setTransitionClass('closing');
             sideBarTransitionHandle = setTimeout(()=>{
                 setTransitionClass('closed');
@@ -32,10 +34,9 @@ const Sidebar =(props)=>{
                 sideBarTransitionHandle = null;
             }, 200);
         }
-    },[showSidebar]);
+    },[showSidebar, transitionClass]);
 
     useEffect(()=>{
-        console.log("Update sidebar")
         TransitionSideBar();
     },[showSidebar, TransitionSideBar]);
 

@@ -10,7 +10,7 @@ const Section =props=>{
 
     return (
         <section id={id} className={`section ${props.className}`}>
-            <div className='section-text-container'>
+            <div className='section-text-container d-flex f-column f-center'>
                 <h2 className='header-text'>{title}</h2>
                 <p className='primary-text'>{text}</p>
                 <span className='section-arrow' onClick={()=>{(jumpFunc) && jumpFunc(jumpId)}}>

@@ -12,17 +12,17 @@ const InfoCard =props=>{
         if(window.innerWidth <= 768){
             console.log('info open sidebar')
             props.openSidebar(title,
-                <p className='primary-text secondary'>{infoCardText}</p>
+                <div className='d-flex f-center '><p className='primary-text secondary text-light w-50p'>{infoCardText}</p></div>
                 );
         }
     }
 
     return (
-        <div id={id} className={`info-card ${props.className}`}>
-            <div className='card-image-container'>
+        <div id={id} className={`info-card d-flex ${props.className}`}>
+            <div className='card-image-container f-2'>
             {(src.length > 0) && <ImageCard onClick={clickCard} className='scale' src={src} text={imageTitle}/>}
             </div>
-            <div className='info-card-text-container flex-center'>
+            <div className='info-card-text-container d-flex f-center f-column f-3'>
                 <h2 className='header-text'>{title}</h2>
                 <p className='primary-text secondary'>{infoCardText}</p>
             </div>

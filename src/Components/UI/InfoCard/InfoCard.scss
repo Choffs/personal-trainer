@@ -1,34 +1,29 @@
 @import '../../../style/variables.scss';
 .info-card{
-    display: flex;
     width: 100%;
     min-height: var(--card-max-height);
     max-height: var(--card-max-height);
 }
 .card-image-container{
-    flex: 2;
     width: var(--card-max-width);
 }
 
 .info-card-text-container{
-    display: flex;
-    flex: 3;
     padding: 0 clamp(2rem, calc(25vw / 6) ,10rem);
-    flex-direction: column;
     gap: 2.25rem;
 }
 
 @media screen and (max-width: $medScreens) {
     .info-card-text-container{
-        display: none;
+        display: none !important;
     }
     .card-image-container .image-card-circle-arrow{
-        display: block;
+        display: block !important;
     }
 }
 @media screen and (max-width: $largeScreens){
     .info-card-text-container{
-        flex: 4;
+        flex: 4 !important;
     }
     .card-image-container{
         flex: 2;
