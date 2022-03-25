@@ -1,5 +1,7 @@
 $darkBase: #21252A;
+$darkBaseFaded: #21252A55; 
 $lightBase: #E9E9E9;
+$lightBaseFaded: #E9E9E955;
 $cardMinHeight: 307.3px;
 $cardMaxHeight: 569px;
 $cardMinWidth: 256px;
@@ -15,6 +17,7 @@ $smallestScreenSupported: 360px;
 
 :root{
   --dark-base: #{$darkBase};
+  --dark-base-faded: #{$darkBaseFaded};
   --light-base: #{$lightBase};
   --small-screens: #{$smallScreens};
   --med-screens: #{$medScreens};
