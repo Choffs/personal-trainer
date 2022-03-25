@@ -1,9 +1,10 @@
 
 
 .link{
-    opacity: .75;
+    opacity: .85;
     list-style: none;
     text-decoration: none;
+    text-shadow: 1px 1px 0px black;
     cursor: pointer;
     transition: opacity .25s;
 }

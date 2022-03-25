@@ -12,6 +12,8 @@
 .hero img{
     user-select: none;
     position: absolute;
+    background-color: black;
+    opacity: .65;
     z-index: 1;
     top: 0;
     bottom: 0;
@@ -22,11 +24,28 @@
     object-fit: cover;
 }
 .hero .hero-wave{
+    background-color: var(--light-base);
     mix-blend-mode: hue;
-    opacity: 1;
+    opacity: .50;
     object-position: 0 200px;
 }
 .hero .hero-container{
     z-index: 2;
     margin-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+
+    button{
+        background-color: var(--dark-base);
+        color: var(--light-base);
+        font-weight: 700;
+        border: 0;
+        padding: 1.5rem 3rem;
+        border-radius: .75rem;
+        cursor: pointer;
+        width: 50%;
+    }
 }

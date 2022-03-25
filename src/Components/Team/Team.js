@@ -20,12 +20,12 @@ const TEAM_DATA = [
 const Team = ()=>{
     const getTeam = ()=>{
         return TEAM_DATA.map((member, idx)=>{
-            return <Member memberName={member.memberName} memberTitle={member.memberTitle} memberDescription={member.memberDescription} memberImage={member.memberImage} reversed={!(idx % 2 === 0)} />
+            return <Member key={idx} memberName={member.memberName} memberTitle={member.memberTitle} memberDescription={member.memberDescription} memberImage={member.memberImage} reversed={!(idx % 2 === 0)} />
         })
     }
     return (
-        <div className="team dark-mode">
-            <h2>Meet The Team</h2>
+        <div id='team-page' className="team dark-mode">
+            <h2 className='team-title'>Meet The Team</h2>
             <div className="member-container">
                {getTeam()}
             </div>

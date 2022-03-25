@@ -3,6 +3,9 @@
     font-size: clamp(calc($headerTextSize / 2), calc(100vw / calc(1440 / 64)), $headerTextSize);
     font-weight: 900;
   }
+  .header-text.secondary{
+    font-size: clamp(calc($headerTextSize / 3), calc(100vw / calc(1440 / 32)), $headerTextSize);
+  }
   .primary-text{
     font-size: clamp(calc($primaryTextSize / 1.25),calc(100vw / calc(1440/ 16)),$primaryTextSize);
   }

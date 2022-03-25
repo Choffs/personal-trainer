@@ -9,6 +9,18 @@
     min-width: $cardMinWidth;
     min-height: $cardMinHeight;
 }
+.image-card.scale{
+    h2{
+        font-size: clamp(2rem, calc(100vw * 0.083) ,4rem);
+    }
+    min-width: $cardMinWidth;
+    min-height: $cardMinHeight;
+    max-width: $cardMaxWidth;
+    max-height: $cardMaxHeight;
+    width: calc(90vw /2);
+    height: calc(110vw /2);
+
+}
 .image-card h2{
     z-index: 2;
     color: var(--light-base);
@@ -34,13 +46,4 @@
 }
 .card-show-button span{
     display: block;
-}
-@media screen and (max-width: $largeScreens){
-    .image-card.scale{
-        width: var(--card-min-width);
-        height: var(--card-min-height);
-    }
-    .image-card.scale h2{
-        font-size: 2rem;
-    } 
 }

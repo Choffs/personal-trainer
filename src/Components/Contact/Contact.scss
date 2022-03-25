@@ -1,0 +1,96 @@
+@import '../../style/variables.scss';
+$inputPadding: 2rem;
+$inputWidth: calc(100% - calc(15% + $inputPadding));
+$contactHeaderWidth: 22rem;
+$contactHeaderHeight: calc($contactHeaderWidth / 3);
+$contactHeaderFontSize: clamp(2rem, calc(($contactHeaderWidth / 3.5) - ($contactHeaderHeight / 2)), 10rem);
+
+.contact{
+    padding-top: calc(2rem + ($contactHeaderHeight / 2));
+    padding-bottom: 2rem;
+    background-color: var(--light-base);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.contact-header{
+    position: absolute;
+    top: calc(($contactHeaderHeight / 2) * -1);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $darkBase;
+    color: $lightBase;
+    width: $contactHeaderWidth;
+    height: $contactHeaderHeight;
+    font-size: $contactHeaderFontSize;
+}
+
+.contact-form{
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+    button{
+        padding: $inputPadding calc($inputPadding * 2);
+        font-weight: 900;
+        align-self: flex-end;
+    }
+
+     input, textarea{
+        padding: $inputPadding;
+        font-weight: 800;
+    
+    }
+    input, textarea, button{
+        border-radius: 7px;
+        border: 0;
+        background-color: var(--dark-base);
+        color: var(--light-base);
+    }
+    input:focus, textarea:focus{
+        outline: 1px solid white;
+    }
+    &, input, textarea{
+        min-width: 200px;
+        width: $inputWidth;
+        max-width: 927px;
+    }
+}
+.contact-footer{
+    display: flex;
+    gap: 2rem;
+
+    .contact-card{
+        border-radius: 1.25rem;
+        gap: 1rem;
+        align-items: center;
+        color: var(--light-base);
+        padding: 1rem;
+        display: flex;
+        background-color: var(--dark-base);
+    }
+}
+
+
+
+@media(max-width: calc($medScreens - 1px)){
+    .contact-form button{
+        align-self: center;
+    }
+    .contact-header{
+        position: initial;
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .contact{
+        padding-top: 0;
+    }
+}
+@media (min-width: $medScreens){
+    .contact-form button{
+        margin-right: 54px; 
+    }
+}
