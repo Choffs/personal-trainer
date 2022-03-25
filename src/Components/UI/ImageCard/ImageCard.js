@@ -8,7 +8,7 @@ const ImageCard =props=>{
     return (
         <div onClick={cardClick} className={`image-card p-rel d-flex f-column f-center g-2 ${props.className}`}>
             <h2>{text}</h2>
-            {(cardClick) && <span className='image-card-circle-arrow d-none'><SVG>circle-arrow</SVG></span>}
+            {(cardClick) && <span className='image-card-circle-arrow d-none text-light'><SVG>circle-arrow</SVG></span>}
             <img className='p-abs fs' src={src} alt=''/>
         </div>
     )
