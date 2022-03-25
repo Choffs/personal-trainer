@@ -6,14 +6,19 @@ const InfoCard =props=>{
     const imageTitle = props.imageTitle || 'title';
     const title = props.title || 'title';
     const infoCardText = props.infoCardText || 'text';
+    const id = props.id;
     const clickCard =()=>{
-        if(window.screen.width <= 768){
-            console.log('Small Screen')
+        console.log(window.screen.width);
+        if(window.innerWidth <= 768){
+            console.log('info open sidebar')
+            props.openSidebar(title,
+                <p className='primary-text secondary'>{infoCardText}</p>
+                );
         }
     }
 
     return (
-        <div className={`info-card ${props.className}`}>
+        <div id={id} className={`info-card ${props.className}`}>
             <div className='card-image-container'>
             {(src.length > 0) && <ImageCard onClick={clickCard} className='scale' src={src} text={imageTitle}/>}
             </div>

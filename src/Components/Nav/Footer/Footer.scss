@@ -1,0 +1,30 @@
+@import '../../../style/variables.scss';
+.footer{
+    padding: 5rem 0;
+    background-color: var(--dark-base);
+    color: $lightBase;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.footer-main{
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+.footer-bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .50rem;
+    .share-bar{
+        display: flex;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: $medScreens){
+    .footer-main{
+        flex-direction: column;
+        align-items: center;
+    }
+}
