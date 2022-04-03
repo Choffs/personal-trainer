@@ -2,11 +2,11 @@ import './Section.scss';
 import SVG from '../../svg/SVG';
 
 const Section =props=>{
+
     const text = props.text || 'Default Text';
     const title = props.title || 'Default Title';
     const {jumpId, jumpFunc} = props.jumpTo || {jumpId: null, jumpFunc: null};
     const id = props.id;
-
 
     return (
         <section id={id} className={`section ${props.className}`}>

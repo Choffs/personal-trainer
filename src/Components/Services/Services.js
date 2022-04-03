@@ -20,11 +20,13 @@ const SERVICES = [
     },
 ]
 const Services = ()=>{
+    
     const getCards = ()=>{
         return SERVICES.map((service, idx)=>{
             return <ImageCard key={idx} src={service.src} text={service.imageTitle} className='service-card scale'/>
         });
     }
+
     return (
         <div id='services-page' className="services d-flex g-5 f-center">
             {getCards()}

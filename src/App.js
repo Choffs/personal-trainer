@@ -9,7 +9,6 @@ function App() {
   const [sidebar, setSidebar] = useState({showSidebar: false, header: '', content: null});
 
   const openSidebar = (header, content) =>{
-    console.log("open Sidebar")
     if(!sidebar.showSidebar){
       setSidebar({showSidebar: true, header: header, content: content});
     }

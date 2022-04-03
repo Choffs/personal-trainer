@@ -1,12 +1,13 @@
 import './Member.scss';
 
 const Member =(props)=>{
+    
     const memberName = props.memberName || 'Berry Smith';
     const memberTitle = props.memberTitle || 'Personal Trainer';
     const memberDescription = props.memberDescription || 'Description';
     const memberImage = props.memberImage || null;
     const reversed = props.reversed || false;
-    // 
+     
     return (
         <div className={`member d-flex p-rel f-center ${(reversed) && 'reversed'}`}>
             <div className="member-img" style={(memberImage !== null) ? {backgroundImage: `url(${memberImage})`} : {}}>
