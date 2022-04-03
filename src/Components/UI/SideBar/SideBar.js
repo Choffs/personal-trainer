@@ -1,40 +1,41 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import './Sidebar.scss';
 import SVG from "../../svg/SVG";
 
-let sideBarTransitionHandle = null;
-
 const Sidebar =(props)=>{
+
     const header = props.header || 'Default Header';
     const content = props.children;
     const showSidebar = props.showSidebar || false;
     const closeSidebar = props.closeSidebar || (()=>{throw new Error("No Close Function set for Sidebar")});
     const [transitionClass, setTransitionClass] = useState('closed');
+    const timeoutHandlerRef = useRef(null);
+
+    const clearSideBarTimeout = ()=>{
+        clearTimeout(timeoutHandlerRef.current);
+        timeoutHandlerRef.current = null;
+    }
 
     const TransitionSideBar = useCallback(()=>{
-        if(sideBarTransitionHandle){
-            clearTimeout(sideBarTransitionHandle);
-            sideBarTransitionHandle=null;
+        if(timeoutHandlerRef.current){
+            clearSideBarTimeout();
         }
         if(showSidebar){
             if(transitionClass === 'open') return;
-            setTransitionClass('opening');
-            sideBarTransitionHandle = setTimeout(()=>{
+            setTransitionClass('opening'); 
+            timeoutHandlerRef.current = setTimeout(()=>{
                 setTransitionClass('open');
-                clearTimeout(sideBarTransitionHandle);
-                sideBarTransitionHandle = null;
+                clearSideBarTimeout();
             }, 200);
+            return;
         }
-        else{
-            if(transitionClass === 'closed') return;
+        else if(transitionClass === 'closed') return;
             setTransitionClass('closing');
-            sideBarTransitionHandle = setTimeout(()=>{
+            timeoutHandlerRef.current = setTimeout(()=>{
                 setTransitionClass('closed');
-                clearTimeout(sideBarTransitionHandle);
-                sideBarTransitionHandle = null;
+                clearSideBarTimeout();
             }, 200);
-        }
-    },[showSidebar, transitionClass]);
+        },[showSidebar, transitionClass]);
 
     useEffect(()=>{
         TransitionSideBar();

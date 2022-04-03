@@ -8,12 +8,14 @@ import Contact from "../Contact/Contact";
 
 
 const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Consectetur morbi egestas dui urna, consectetur pellentesque. Eget cursus amet, quis posuere accumsan proin turpis potenti dignissim. Mauris mi senectus est vestibulum dignissim ultrices purus dictum. Nibh diam aliquet nec lorem faucibus quam odio lectus. Est, in duis in pellentesque posuere. Phasellus in adipiscing neque at ac nisl, rutrum massa quis. Velit mattis amet ac porttitor donec etiam eu, egestas phasellus. Purus, in leo, integer et sed justo, proin dolor eget. Tellus lorem hendrerit eu eleifend pellentesque pharetra, eu sed. Gravida risus mi nunc, massa lacinia fringilla. Orci fusce adipiscing morbi aliquam nunc, id. Convallis ipsum nisl tempus placerat viverra semper egestas ac tortor. Volutpat, nullam tortor nec nunc tellus sit. Arcu facilisi ut et sit.';
+
 const Landing = (props)=>{
+    
     const jumpFunction = (id)=>{
         const loc = document.getElementById(id);
-        
         window.scrollTo({left: 0,top: loc.offsetTop, behavior: 'smooth'});
     }
+
     return (
         <main>
             <Hero />

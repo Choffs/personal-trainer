@@ -2,6 +2,7 @@ import SVG from "../../svg/SVG";
 import './Footer.scss';
 
 const Footer = ()=>{
+    
     return <footer className='footer'>
         <div className="footer-main d-flex">
         <section>

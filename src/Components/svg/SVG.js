@@ -1,3 +1,4 @@
+import React from 'react';
 import SVGArrow from "./SVGArrow/SVGArrow";
 import SVGCancel from "./SVGCancel/SVGCancel";
 import SVGCircleArrow from "./SVGCircleArrow/SVGCircleArrow";
@@ -8,7 +9,7 @@ import SVGInstagram from "./SVGInstagram/SVGInstagram";
 import SVGTwitter from "./SVGTwitter/SVGTwitter";
 
 const SVG = (props)=>{
-    console.log(typeof props.children)
+    
     const type = props.children || '';
 
     const getSVG =()=>{
@@ -38,4 +39,4 @@ const SVG = (props)=>{
 
     return getSVG();
 }
-export default SVG;
+export default React.memo(SVG);
