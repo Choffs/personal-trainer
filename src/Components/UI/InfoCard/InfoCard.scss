@@ -13,6 +13,11 @@
     gap: 2.25rem;
 }
 
+.info-sidebar-text{
+    min-width: 320px;
+    width: 50%;
+}
+
 @media screen and (max-width: $medScreens) {
     .info-card-text-container{
         display: none !important;
