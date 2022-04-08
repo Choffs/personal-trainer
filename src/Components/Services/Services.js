@@ -1,5 +1,7 @@
 import './Serivces.scss';
 import ImageCard from "../UI/ImageCard/ImageCard";
+import useIntersect from '../../hooks/use-intersect';
+import { useRef, useState } from 'react';
 
 const SERVICES = [
     {
@@ -20,7 +22,9 @@ const SERVICES = [
     },
 ]
 const Services = ()=>{
-    
+    const serviceRef = useRef();
+    const [loadServices, setLoadServices] = useState(false);
+    useIntersect(serviceRef,()=>setLoadServices(true));
     const getCards = ()=>{
         return SERVICES.map((service, idx)=>{
             return <ImageCard key={idx} src={service.src} text={service.imageTitle} className='service-card scale'/>
@@ -28,8 +32,8 @@ const Services = ()=>{
     }
 
     return (
-        <div id='services-page' className="services d-flex g-5 f-center">
-            {getCards()}
+        <div ref={serviceRef} id='services-page' className="services d-flex g-5 f-center">
+            {(loadServices) && getCards()}
         </div>
     )
 }
